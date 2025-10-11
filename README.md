@@ -41,8 +41,6 @@ This project implements a **lightweight recommendation engine**:
 5. Rendered in a clean card UI with details and “Apply Now” links  
 6. Includes a **feedback mechanism** (“useful”, “not useful”, “applied”) to adjust weights over time
 
-You can later evolve it (e.g. move to embeddings, rank learning, multilingual support, reinforcement learning) — but this version begins with a transparent, CPU‑efficient base.
-
 ---
 
 ## 🏗 Architecture & Stack
