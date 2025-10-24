@@ -37,54 +37,54 @@ export default function InternshipRecommender() {
           const data = await response.json()
           setMetadata(data)
         } else {
-          setMetadata({
-            sectors: [
-              { value: "software-development", label: "Software Development" },
-              { value: "data-science", label: "Data Science" },
-              { value: "marketing", label: "Marketing" },
-              { value: "design", label: "Design" },
-              { value: "finance", label: "Finance" },
-            ],
-            locations: [
-              { value: "bangalore", label: "Bangalore" },
-              { value: "delhi", label: "Delhi" },
-              { value: "mumbai", label: "Mumbai" },
-              { value: "hyderabad", label: "Hyderabad" },
-              { value: "pune", label: "Pune" },
-            ],
-            education: [
-              { value: "btech", label: "B.Tech" },
-              { value: "bca", label: "BCA" },
-              { value: "mca", label: "MCA" },
-              { value: "mtech", label: "M.Tech" },
-              { value: "bsc", label: "B.Sc" },
-            ],
-          })
+          // setMetadata({
+          //   sectors: [
+          //     { value: "software-development", label: "Software Development" },
+          //     { value: "data-science", label: "Data Science" },
+          //     { value: "marketing", label: "Marketing" },
+          //     { value: "design", label: "Design" },
+          //     { value: "finance", label: "Finance" },
+          //   ],
+          //   locations: [
+          //     { value: "bangalore", label: "Bangalore" },
+          //     { value: "delhi", label: "Delhi" },
+          //     { value: "mumbai", label: "Mumbai" },
+          //     { value: "hyderabad", label: "Hyderabad" },
+          //     { value: "pune", label: "Pune" },
+          //   ],
+          //   education: [
+          //     { value: "btech", label: "B.Tech" },
+          //     { value: "bca", label: "BCA" },
+          //     { value: "mca", label: "MCA" },
+          //     { value: "mtech", label: "M.Tech" },
+          //     { value: "bsc", label: "B.Sc" },
+          //   ],
+          // })
         }
       } catch (error) {
-        setMetadata({
-          sectors: [
-            { value: "software-development", label: "Software Development" },
-            { value: "data-science", label: "Data Science" },
-            { value: "marketing", label: "Marketing" },
-            { value: "design", label: "Design" },
-            { value: "finance", label: "Finance" },
-          ],
-          locations: [
-            { value: "bangalore", label: "Bangalore" },
-            { value: "delhi", label: "Delhi" },
-            { value: "mumbai", label: "Mumbai" },
-            { value: "hyderabad", label: "Hyderabad" },
-            { value: "pune", label: "Pune" },
-          ],
-          education: [
-            { value: "btech", label: "B.Tech" },
-            { value: "bca", label: "BCA" },
-            { value: "mca", label: "MCA" },
-            { value: "mtech", label: "M.Tech" },
-            { value: "bsc", label: "B.Sc" },
-          ],
-        })
+        // setMetadata({
+        //   sectors: [
+        //     { value: "software-development", label: "Software Development" },
+        //     { value: "data-science", label: "Data Science" },
+        //     { value: "marketing", label: "Marketing" },
+        //     { value: "design", label: "Design" },
+        //     { value: "finance", label: "Finance" },
+        //   ],
+        //   locations: [
+        //     { value: "bangalore", label: "Bangalore" },
+        //     { value: "delhi", label: "Delhi" },
+        //     { value: "mumbai", label: "Mumbai" },
+        //     { value: "hyderabad", label: "Hyderabad" },
+        //     { value: "pune", label: "Pune" },
+        //   ],
+        //   education: [
+        //     { value: "btech", label: "B.Tech" },
+        //     { value: "bca", label: "BCA" },
+        //     { value: "mca", label: "MCA" },
+        //     { value: "mtech", label: "M.Tech" },
+        //     { value: "bsc", label: "B.Sc" },
+        //   ],
+        // })
       }
     }
 
