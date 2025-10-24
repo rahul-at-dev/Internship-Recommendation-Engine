@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { CheckCircle, XCircle, Bookmark, ExternalLink, Sparkles, Target, MapPin, GraduationCap } from "lucide-react"
+import { title } from "process"
 
 export default function InternshipRecommender() {
   const [formData, setFormData] = useState({
@@ -92,8 +93,29 @@ export default function InternshipRecommender() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setIsLoading(true)
     setHasSearched(true)
+
+    if (!formData.skills) {
+    toast({
+      title: "Missing Skills",
+      description: "Please enter at least one skill (comma separated) to get recommendations.",
+      variant: "destructive",
+      duration: 4000,
+    })
+    return;
+  }
+
+  if (!formData.education) {
+    toast({
+      title:"Missing Education Level",
+      description: "Please select your education level to get accurate recommendations.",
+      variant: "destructive",
+      duration: 4000,
+    })
+    return;
+  }
+
+    setIsLoading(true)
 
     try {
       const response = await fetch("/api/recommend", {
@@ -250,6 +272,7 @@ export default function InternshipRecommender() {
                       ))}
                     </SelectContent>
                   </Select>
+            
                 </div>
               </div>
 
