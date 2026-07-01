@@ -1,6 +1,8 @@
-# Internship Recommendation Engine v2
+# Internship Recommendation Engine 
+## Home Page
 
-🔗 **Live Demo**: [internship-recommender-v2.vercel.app](https://internship-recommender-v2.vercel.app)
+![Home Page](/public/homepage.png)
+🔗 **Live Demo**: [internship-recommendation-engine-two.vercel.app](https://internship-recommendation-engine-two.vercel.app/)
 
 Ever spent hours scrolling through internship listings, only to find that most don't match what you're actually looking for? I've been there too, and that's exactly why I built this recommendation engine.
 
