@@ -250,59 +250,61 @@ export default function InternshipRecommender() {
           </div>
 
           {/* Advanced Dropdown Filters */}
-          <div className="flex flex-wrap justify-center gap-3 relative z-20 mt-4 max-w-2xl mx-auto">
-            <div className="w-44">
-              <Select
-                value={formData.sector}
-                onValueChange={(value) => setFormData({ ...formData, sector: value })}
-              >
-                <SelectTrigger className="bg-[#18181b]/70 backdrop-blur-sm border border-white/10 rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground focus:ring-[#bf5728] hover:bg-white/5 transition-all">
-                  <SelectValue placeholder="Sector" />
-                </SelectTrigger>
-                <SelectContent>
-                  {metadata.sectors.map((sector) => (
-                    <SelectItem key={sector.value} value={sector.label}>
-                      {sector.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+          <div className="relative z-20 mt-4 max-w-2xl mx-auto w-full px-4 sm:px-0 flex flex-col items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
+              <div className="w-full">
+                <Select
+                  value={formData.sector}
+                  onValueChange={(value) => setFormData({ ...formData, sector: value })}
+                >
+                  <SelectTrigger className="w-full bg-[#18181b]/70 backdrop-blur-sm border border-white/10 rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground focus:ring-[#bf5728] hover:bg-white/5 transition-all">
+                    <SelectValue placeholder="Sector" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {metadata.sectors.map((sector) => (
+                      <SelectItem key={sector.value} value={sector.label}>
+                        {sector.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
 
-            <div className="w-44">
-              <Select
-                value={formData.location}
-                onValueChange={(value) => setFormData({ ...formData, location: value })}
-              >
-                <SelectTrigger className="bg-[#18181b]/70 backdrop-blur-sm border border-white/10 rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground focus:ring-[#bf5728] hover:bg-white/5 transition-all">
-                  <SelectValue placeholder="Location" />
-                </SelectTrigger>
-                <SelectContent>
-                  {metadata.locations.map((location) => (
-                    <SelectItem key={location.value} value={location.label}>
-                      {location.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+              <div className="w-full">
+                <Select
+                  value={formData.location}
+                  onValueChange={(value) => setFormData({ ...formData, location: value })}
+                >
+                  <SelectTrigger className="w-full bg-[#18181b]/70 backdrop-blur-sm border border-white/10 rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground focus:ring-[#bf5728] hover:bg-white/5 transition-all">
+                    <SelectValue placeholder="Location" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {metadata.locations.map((location) => (
+                      <SelectItem key={location.value} value={location.label}>
+                        {location.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
 
-            <div className="w-44">
-              <Select
-                value={formData.education}
-                onValueChange={(value) => setFormData({ ...formData, education: value })}
-              >
-                <SelectTrigger className="bg-[#18181b]/70 backdrop-blur-sm border border-white/10 rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground focus:ring-[#bf5728] hover:bg-white/5 transition-all">
-                  <SelectValue placeholder="Education" />
-                </SelectTrigger>
-                <SelectContent>
-                  {metadata.education.map((education) => (
-                    <SelectItem key={education.value} value={education.label}>
-                      {education.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <div className="w-full">
+                <Select
+                  value={formData.education}
+                  onValueChange={(value) => setFormData({ ...formData, education: value })}
+                >
+                  <SelectTrigger className="w-full bg-[#18181b]/70 backdrop-blur-sm border border-white/10 rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground focus:ring-[#bf5728] hover:bg-white/5 transition-all">
+                    <SelectValue placeholder="Education" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {metadata.education.map((education) => (
+                      <SelectItem key={education.value} value={education.label}>
+                        {education.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
 
             {(formData.sector || formData.location || formData.education || formData.skills) && (
@@ -310,7 +312,7 @@ export default function InternshipRecommender() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setFormData({ skills: "", sector: "", location: "", education: "" })}
-                className="rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground hover:text-white hover:bg-white/5 transition-all"
+                className="rounded-full h-10 px-4 text-xs font-semibold text-muted-foreground hover:text-white hover:bg-white/5 transition-all mt-3"
               >
                 Clear Filters
               </Button>
